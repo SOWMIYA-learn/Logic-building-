@@ -1,0 +1,24 @@
+
+
+public class DiamondPattern {
+    public static void main(String[] args) {
+        int rows = 5; // Number of rows for the upper half
+        for (int i = 1; i <= rows * 2 - 1; i++) {
+            int stars = i <= rows ? i : rows * 2 - i;
+            int spaces = rows - stars;
+            System.out.println(" ".repeat(spaces) + "*".repeat(stars * 2 - 1));
+        }
+    }
+}
+
+O/P :
+
+    *    
+   ***   
+  *****  
+ ******* 
+*********
+ ******* 
+  *****  
+   ***   
+    *
