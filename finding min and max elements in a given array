@@ -1,0 +1,33 @@
+
+def find_min_and_max(arr):
+    if not arr:
+        return "Array is empty"
+    
+    min_element = arr[0]
+    max_element = arr[0]
+    
+    for num in arr:
+        if num < min_element:
+            min_element = num
+        if num > max_element:
+            max_element = num
+    
+    return min_element, max_element
+
+# Input: Array of nos
+array = [23, 12, 56, 7, 98, 45]
+
+# Finding the min and max
+min_val, max_val = find_min_and_max(array)
+
+# Output the results
+print("Array:", array)
+print("Minimum element:", min_val)
+print("Maximum element:", max_val)
+
+O/P:
+
+Array: [23, 12, 56, 7, 98, 45]
+Minimum element: 7
+Maximum element: 98
+
