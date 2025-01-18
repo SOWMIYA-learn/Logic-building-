@@ -1,0 +1,20 @@
+
+
+def rotate_array(nums, k):
+    # Ensure k is within the bounds of the array length
+    k %= len(nums)
+    # Rotate the array
+    nums[:] = nums[-k:] + nums[:-k]
+    return nums
+
+# Example usage
+array = [1, 2, 3, 4, 5, 6, 7]
+steps = 3
+rotated_array = rotate_array(array, steps)
+print("Original array:", [1, 2, 3, 4, 5, 6, 7])
+print(f"Array after rotating {steps} steps to the right:", rotated_array)
+
+O/P :
+
+Original array: [1, 2, 3, 4, 5, 6, 7]
+Array after rotating 3 steps to the right: [5, 6, 7, 1, 2, 3, 4]
