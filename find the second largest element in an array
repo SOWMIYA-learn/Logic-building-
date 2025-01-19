@@ -1,0 +1,31 @@
+# Program to find the second largest element in an array
+
+def find_second_largest(arr):
+    if len(arr) < 2:
+        return "Array must have at least two elements."
+    
+    # Initialize the largest and second largest
+    largest = second_largest = float('-inf')
+
+    for num in arr:
+        if num > largest:
+            # Update largest and second largest
+            second_largest = largest
+            largest = num
+        elif num > second_largest and num != largest:
+            # Update second largest if current number is smaller than largest but greater than second largest
+            second_largest = num
+    
+    return second_largest if second_largest != float('-inf') else "No second largest element exists."
+
+# Input array
+arr = [12, 35, 1, 10, 34, 1]
+
+# Find and display the second largest element
+result = find_second_largest(arr)
+print("Second largest element:", result)
+
+O/P :
+Input array: [12, 35, 1, 10, 34, 1]
+Output:
+Second largest element: 34
