@@ -1,0 +1,9 @@
+
+
+def are_rotations(arr1, arr2):
+    return len(arr1) == len(arr2) and arr2 in (arr1 + arr1)
+
+# Example Usage
+arr1 = [1, 2, 3, 4, 5]
+arr2 = [3, 4, 5, 1, 2]
+print(are_rotations(arr1, arr2))  # Output: True
