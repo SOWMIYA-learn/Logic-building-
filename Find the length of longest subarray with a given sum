@@ -1,0 +1,21 @@
+
+program :
+
+def longest_subarray(arr, target):
+    prefix_sum, max_len, sums = 0, 0, {}
+    for i, num in enumerate(arr):
+        prefix_sum += num
+        if prefix_sum == target:
+            max_len = i + 1
+        if prefix_sum - target in sums:
+            max_len = max(max_len, i - sums[prefix_sum - target])
+        if prefix_sum not in sums:
+            sums[prefix_sum] = i
+    return max_len
+
+Input : 
+arr = [1, 2, 3, 7, 5]
+target = 12
+print(longest_subarray(arr, target))  
+
+Output: 2
