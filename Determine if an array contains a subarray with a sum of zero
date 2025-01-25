@@ -1,0 +1,17 @@
+
+
+def has_zero_sum_subarray(arr):
+    seen = set()
+    curr_sum = 0
+    for num in arr:
+        curr_sum += num
+        if curr_sum == 0 or curr_sum in seen:
+            return True
+        seen.add(curr_sum)
+    return False
+
+
+arr = [3, 4, -7, 1, 2, -1, 6]
+print(has_zero_sum_subarray(arr)) 
+
+Output: True
