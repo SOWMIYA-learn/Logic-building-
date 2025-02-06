@@ -1,0 +1,12 @@
+
+
+s = input()
+print(s.replace(" ", "%20"))
+
+Input:
+
+Hello World Python
+
+Output:
+
+Hello%20World%20Python
