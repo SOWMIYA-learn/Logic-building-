@@ -1,0 +1,10 @@
+
+
+from itertools import permutations
+
+s = "ABC"
+print(["".join(p) for p in permutations(s)])
+
+O/P :
+
+['ABC', 'ACB', 'BAC', 'BCA', 'CAB', 'CBA']
