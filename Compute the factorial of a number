@@ -1,0 +1,7 @@
+
+
+print((lambda n: 1 if n == 0 else n * (lambda f: f(f))(lambda f: lambda x: 1 if x == 0 else x * f(f)(x - 1))(n))(5))
+
+O/P :
+
+120
