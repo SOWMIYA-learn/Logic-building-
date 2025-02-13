@@ -1,0 +1,11 @@
+
+n = int(input("Enter n: "))
+a, b = 0, 1
+while a <= n:
+    print(a, end=" ")
+    a, b = b, a + b
+
+O/p:
+
+Enter n: 10
+0 1 1 2 3 5 8
