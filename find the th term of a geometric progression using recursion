@@ -1,0 +1,11 @@
+
+
+def gp_term(a, r, n):
+    return a if n == 1 else r * gp_term(a, r, n - 1)
+
+# Example 
+a, r, n = 2, 3, 4  # First term = 2, Common ratio = 3, Term to find = 4
+print(gp_term(a, r, n))
+
+O/p :
+54
