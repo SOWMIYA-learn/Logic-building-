@@ -1,0 +1,23 @@
+
+
+def generate_parentheses(n, s="", open=0, close=0):
+    if len(s) == 2 * n:
+        print(s)
+        return
+    if open < n:
+        generate_parentheses(n, s + "(", open + 1, close)
+    if close < open:
+        generate_parentheses(n, s + ")", open, close + 1)
+
+n = int(input("Enter n: "))
+generate_parentheses(n)
+
+Output 
+
+(for n=3):
+
+((()))
+(()())
+(())()
+()(())
+()()()
